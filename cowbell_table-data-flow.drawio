@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2021-09-29T18:08:08.329Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/93.0.4577.82 Safari/537.36" etag="kMq--fsLW9BL1tHKUHdC" version="15.3.8" type="github">
+<mxfile host="app.diagrams.net" modified="2021-10-04T22:59:02.291Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/93.0.4577.82 Safari/537.36" etag="GpKk25i2Wik5z5HL3L7-" version="15.3.8" type="github">
   <diagram id="kgpKYQtTHZ0yAKxKKP6v" name="Page-1">
-    <mxGraphModel dx="1426" dy="769" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+    <mxGraphModel dx="1298" dy="809" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -131,19 +131,19 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="AhGVvRew5cqHdZ6Sx61x-57" value="&lt;h1&gt;URL Update&lt;/h1&gt;&lt;p&gt;useUrlUpdate provides an update handler which is called from the hooks on state-change event.&lt;/p&gt;&lt;p&gt;useUrlUpdate automatically triggers an update to the reducer&#39;s queryState when changes are made to the url itself.&lt;/p&gt;&lt;p&gt;Thus queryState cascades down and remains in sync with the url&lt;/p&gt;&lt;p&gt;&lt;b&gt;Important: &lt;/b&gt;the reducer&#39;s queryState can &lt;i&gt;only be updated by useUrlUpdate hook&lt;/i&gt;. No other hooks will have direct access to dispatch updateQueryState. This guarantees a directional cascade of data from the url itself down to the reducer and beyond&lt;/p&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;" vertex="1" parent="1">
-          <mxGeometry x="40" y="520" width="190" height="340" as="geometry" />
+          <mxGeometry x="80" y="520" width="190" height="340" as="geometry" />
         </mxCell>
         <mxCell id="AhGVvRew5cqHdZ6Sx61x-58" value="useUrlUpdate" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="120" y="180" width="120" height="40" as="geometry" />
         </mxCell>
         <mxCell id="AhGVvRew5cqHdZ6Sx61x-60" value="&lt;h1&gt;columnConfig&lt;/h1&gt;&lt;div&gt;columnConfig is initialized using a default object provided by the developer&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;This will be reconciled with savedSettings on page load when using the useSavedSettings api&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;From this point on, the reducer&#39;s columnConfig slice of state will be the source of truth for all related settings.&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;all related updates should be automated using derived state with memoization and useEffect event listeners.&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;This includes updates to tableState triggered by changes in columnConfig.&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;useSavedSettings will also listen for to column config and automatically relay relevant changes to the store&lt;/div&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;" vertex="1" parent="1">
-          <mxGeometry x="280" y="520" width="190" height="440" as="geometry" />
+          <mxGeometry x="320" y="520" width="190" height="440" as="geometry" />
         </mxCell>
         <mxCell id="AhGVvRew5cqHdZ6Sx61x-63" value="&lt;h1&gt;tableState&lt;/h1&gt;&lt;div&gt;wherever possible, tableState updates should be automated using values derived from changes to columnConfig&lt;/div&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;" vertex="1" parent="1">
-          <mxGeometry x="520" y="520" width="190" height="120" as="geometry" />
+          <mxGeometry x="560" y="520" width="190" height="120" as="geometry" />
         </mxCell>
         <mxCell id="AhGVvRew5cqHdZ6Sx61x-64" value="&lt;h1&gt;eventHandlers&lt;/h1&gt;&lt;div&gt;eventHandlers are the least complex aspect of the model.&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;eventHandlers will be a set of handler functions provided by the hooks. this includes both eventHandlers for user interactions on the table, as well as utility functions provided to the other hooks&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;In theory this should be a readonly slice of state. handlers may be added and updated, but rarely if ever removed&lt;/div&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;" vertex="1" parent="1">
-          <mxGeometry x="520" y="660" width="190" height="280" as="geometry" />
+          <mxGeometry x="560" y="660" width="190" height="280" as="geometry" />
         </mxCell>
         <mxCell id="AhGVvRew5cqHdZ6Sx61x-66" value="" style="endArrow=classic;html=1;entryX=1;entryY=0.25;entryDx=0;entryDy=0;" edge="1" parent="1" target="AhGVvRew5cqHdZ6Sx61x-10">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
@@ -161,6 +161,154 @@
           <mxGeometry width="50" height="50" relative="1" as="geometry">
             <mxPoint x="640" y="440" as="sourcePoint" />
             <mxPoint x="510" y="360" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="AhGVvRew5cqHdZ6Sx61x-70" value="&lt;b&gt;URL&lt;/b&gt;" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="365" y="1170" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="AhGVvRew5cqHdZ6Sx61x-71" value="Reducer&lt;br&gt;queryState" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="590" y="1290" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="AhGVvRew5cqHdZ6Sx61x-73" value="hook&lt;br&gt;(usePagination&lt;br&gt;useSort&lt;br&gt;useSearch)" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="500" y="1480" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="AhGVvRew5cqHdZ6Sx61x-75" value="User Interaction" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="240" y="1480" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="AhGVvRew5cqHdZ6Sx61x-77" value="useUrlUpdate" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="160" y="1290" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="AhGVvRew5cqHdZ6Sx61x-85" value="" style="curved=1;endArrow=classic;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" target="AhGVvRew5cqHdZ6Sx61x-71">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="490" y="1210" as="sourcePoint" />
+            <mxPoint x="510" y="1390" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="610" y="1210" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="AhGVvRew5cqHdZ6Sx61x-86" value="" style="curved=1;endArrow=classic;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=1;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="AhGVvRew5cqHdZ6Sx61x-71" target="AhGVvRew5cqHdZ6Sx61x-73">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="460" y="1490" as="sourcePoint" />
+            <mxPoint x="510" y="1440" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="660" y="1450" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="AhGVvRew5cqHdZ6Sx61x-87" value="" style="curved=1;endArrow=classic;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;exitX=0;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="AhGVvRew5cqHdZ6Sx61x-73" target="AhGVvRew5cqHdZ6Sx61x-75">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="460" y="1490" as="sourcePoint" />
+            <mxPoint x="510" y="1440" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="460" y="1530" />
+              <mxPoint x="410" y="1530" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="AhGVvRew5cqHdZ6Sx61x-88" value="" style="curved=1;endArrow=classic;html=1;exitX=0;exitY=0;exitDx=0;exitDy=0;" edge="1" parent="1" source="AhGVvRew5cqHdZ6Sx61x-75">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="460" y="1490" as="sourcePoint" />
+            <mxPoint x="220" y="1370" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="220" y="1430" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="AhGVvRew5cqHdZ6Sx61x-89" value="" style="curved=1;endArrow=classic;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;" edge="1" parent="1" source="AhGVvRew5cqHdZ6Sx61x-77" target="AhGVvRew5cqHdZ6Sx61x-70">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="460" y="1490" as="sourcePoint" />
+            <mxPoint x="510" y="1440" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="250" y="1250" />
+              <mxPoint x="320" y="1220" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="AhGVvRew5cqHdZ6Sx61x-96" value="&lt;h1&gt;&lt;u&gt;URL Update Flow&lt;/u&gt;&lt;/h1&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="315" y="1120" width="240" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="AhGVvRew5cqHdZ6Sx61x-99" value="" style="verticalLabelPosition=bottom;verticalAlign=top;html=1;shape=mxgraph.basic.smiley;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
+          <mxGeometry x="385" y="1320" width="100" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="AhGVvRew5cqHdZ6Sx61x-100" value="&lt;b&gt;columnConfig&lt;/b&gt;" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="330" y="1730" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="AhGVvRew5cqHdZ6Sx61x-101" value="Reducer&lt;br&gt;columnConfig&lt;br&gt;slice of state" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="555" y="1850" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="AhGVvRew5cqHdZ6Sx61x-102" value="hook" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="465" y="2040" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="AhGVvRew5cqHdZ6Sx61x-103" value="tableState" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="205" y="2040" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="AhGVvRew5cqHdZ6Sx61x-104" value="User Interaction" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="125" y="1850" width="120" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="AhGVvRew5cqHdZ6Sx61x-105" value="" style="curved=1;endArrow=classic;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" target="AhGVvRew5cqHdZ6Sx61x-101">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="455" y="1770" as="sourcePoint" />
+            <mxPoint x="475" y="1950" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="575" y="1770" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="AhGVvRew5cqHdZ6Sx61x-106" value="" style="curved=1;endArrow=classic;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=1;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="AhGVvRew5cqHdZ6Sx61x-101" target="AhGVvRew5cqHdZ6Sx61x-102">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="425" y="2050" as="sourcePoint" />
+            <mxPoint x="475" y="2000" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="625" y="2010" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="AhGVvRew5cqHdZ6Sx61x-107" value="" style="curved=1;endArrow=classic;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;exitX=0;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="AhGVvRew5cqHdZ6Sx61x-102" target="AhGVvRew5cqHdZ6Sx61x-103">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="425" y="2050" as="sourcePoint" />
+            <mxPoint x="475" y="2000" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="425" y="2090" />
+              <mxPoint x="375" y="2090" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="AhGVvRew5cqHdZ6Sx61x-108" value="" style="curved=1;endArrow=classic;html=1;exitX=0;exitY=0;exitDx=0;exitDy=0;" edge="1" parent="1" source="AhGVvRew5cqHdZ6Sx61x-103">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="425" y="2050" as="sourcePoint" />
+            <mxPoint x="185" y="1930" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="185" y="1990" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="AhGVvRew5cqHdZ6Sx61x-109" value="" style="curved=1;endArrow=classic;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;" edge="1" parent="1" source="AhGVvRew5cqHdZ6Sx61x-104" target="AhGVvRew5cqHdZ6Sx61x-100">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="425" y="2050" as="sourcePoint" />
+            <mxPoint x="475" y="2000" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="215" y="1810" />
+              <mxPoint x="285" y="1780" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="AhGVvRew5cqHdZ6Sx61x-110" value="&lt;h1&gt;&lt;u&gt;columnConfig Update Flow&lt;/u&gt;&lt;/h1&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="225" y="1680" width="360" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="AhGVvRew5cqHdZ6Sx61x-111" value="" style="verticalLabelPosition=bottom;verticalAlign=top;html=1;shape=mxgraph.basic.smiley;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
+          <mxGeometry x="350" y="1880" width="100" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="AhGVvRew5cqHdZ6Sx61x-114" value="useSavedSettings" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="500" y="1780" width="120" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="AhGVvRew5cqHdZ6Sx61x-117" value="store" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="680" y="1720" width="80" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="AhGVvRew5cqHdZ6Sx61x-118" value="" style="endArrow=classic;startArrow=classic;html=1;entryX=0;entryY=1;entryDx=0;entryDy=0;exitX=1;exitY=0;exitDx=0;exitDy=0;" edge="1" parent="1" source="AhGVvRew5cqHdZ6Sx61x-114" target="AhGVvRew5cqHdZ6Sx61x-117">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="460" y="1870" as="sourcePoint" />
+            <mxPoint x="510" y="1820" as="targetPoint" />
           </mxGeometry>
         </mxCell>
       </root>
